@@ -396,7 +396,7 @@ main(int argc, char **argv)
 	argc -= optind;
 	argv += optind;
 	
-	DBG("argc=%d g_debug=%d, g_threads_num=%d, g_output_size=%jd",
+	DBG("argc=%d g_debug=%d, g_threads_num=%d, g_output_size=%lld",
 		argc, g_debug, g_threads_num, g_output_size);
 
 	if (argc < 1) {
