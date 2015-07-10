@@ -1,3 +1,4 @@
+# Copyright (c) 2014 Wojciech A. Koszek <wojciech@koszek.com>
 wclarge: wclarge.c makefile
 	$(CC) $(CFLAGS) -std=c99 -Wall -pedantic -o wclarge wclarge.c  -lpthread
 
