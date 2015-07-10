@@ -20,7 +20,7 @@ check.small: wclarge
 	diff -u data.small.t data.small.o
 
 clean:
-	rm -rf wclarge _.* *.i *.o cain.txt
+	rm -rf wclarge _.* *.i *.o cain.txt data/data.big.i
 
 mrproper: clean
 	rm -rf cain.txt.bz2

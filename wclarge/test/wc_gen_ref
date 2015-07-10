@@ -1,0 +1,2 @@
+#!/bin/sh
+cat $1 | sort | uniq -c | sort -n | sed 's/ //g'
