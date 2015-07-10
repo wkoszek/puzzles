@@ -42,6 +42,7 @@ def main():
 		print("You must either pass --input with --dict");
 		sys.exit(2)
 
+	random.seed(14)
 	conn = sqlite3.connect(g_input_fn);
 	c = conn.cursor()
 	if g_do_search == False:
