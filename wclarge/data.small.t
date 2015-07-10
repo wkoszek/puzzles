@@ -1,0 +1,12 @@
+1--
+112
+1a
+1ansic
+1awkawk
+1c++
+1else
+1something
+2awk
+3adam
+3koszek
+3wojtek
