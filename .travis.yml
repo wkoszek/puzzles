@@ -1,3 +1,5 @@
+python:
+        - "3.4"
 script:
         - ./travis.sh
 language: c
