@@ -1,11 +1,13 @@
-python:
-        - "3.4"
-script:
-        - ./travis.sh
 language: c
 compiler:
         - clang
         - gcc
+python:
+        - "3.4"
+install:
+        - "pip install ."
+script:
+        - ./travis.sh
 os:
         - linux
         - os
