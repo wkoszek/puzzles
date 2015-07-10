@@ -2,10 +2,8 @@ language: c
 compiler:
         - clang
         - gcc
-python:
-        - "3.4"
 install:
-        - "pip install ."
+        - "apt-get install python3"
 script:
         - ./travis.sh
 os:
