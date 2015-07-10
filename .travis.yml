@@ -1,6 +1,8 @@
 language: python
 python:
         - "3.3"                         
+before_install:
+        - sudo apt-get install time
 script:
         - ./travis.sh
 env:
