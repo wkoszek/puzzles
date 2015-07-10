@@ -1,0 +1,10 @@
+jokily 999.0
+job 995.0
+joked 988.0
+demijohn 987.0
+cajolers 986.0
+joyously 980.0
+journals 975.0
+enjoyed 974.0
+jock 973.0
+jouncing 969.0

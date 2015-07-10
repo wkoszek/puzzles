@@ -1,0 +1,10 @@
+arabicas 1000.0
+cabling 1000.0
+probably 1000.0
+cookable 1000.0
+fabrics 1000.0
+scabbles 1000.0
+stabs 1000.0
+amicable 1000.0
+scabious 1000.0
+beatable 1000.0

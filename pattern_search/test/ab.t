@@ -1,0 +1,10 @@
+reapable 999.0
+abjurers 998.0
+abacuses 997.0
+abet 995.0
+abohms 995.0
+tiltable 995.0
+abators 994.0
+aboding 993.0
+fineable 991.0
+tabarded 991.0
