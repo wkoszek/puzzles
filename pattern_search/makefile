@@ -21,4 +21,4 @@ check:
 	@diff -u ab-big.o test/ab-big.t
 
 clean:
-	rm -rf dictionary-big.txt words-big.db words.db
+	rm -rf dictionary-big.txt words-big.db words.db *.o
