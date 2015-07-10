@@ -1,13 +1,11 @@
-sudo: required
-language: c
-compiler:
-        - clang
-        - gcc
-before_install:
-        - sudo apt-get update
-        - sudo apt-get install python3
+language: python
+python:
+        - "3.3"                         
 script:
         - ./travis.sh
+env:
+        - CC=clang
+        - CC=gcc
 os:
         - linux
         - os
