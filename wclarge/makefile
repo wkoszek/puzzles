@@ -1,33 +1,26 @@
 wclarge: wclarge.c makefile
 	$(CC) $(CFLAGS) -std=c99 -Wall -pedantic -o wclarge wclarge.c  -lpthread
 
-fetch:
+cain.txt.bz2:
 	curl -L -o cain.txt.bz2 http://downloads.skullsecurity.org/passwords/cain.txt.bz2
-showdict:
-	bzcat cain.txt.bz2 | sort | uniq -c | awk '{ print $$2,$$1 }'	
-unpack:
-	rm -rf cain.txt
-	bzcat cain.txt.bz2 | grep -v " " | grep -v '^$$' > cain.txt
-	./word_mixup.py _.tmp data.2.i 20
 
-clean.i:
-	rm -rf dat.i dat.o
-prep.1: clean.i
-	ln -s data.1.i dat.i 
-prep.2: clean.i
-	ln -s data.2.i dat.i
+data.big.i: cain.txt.bz2
+	bzcat cain.txt.bz2 | grep -v " " | grep -v '^$$' | grep -v '^[0-9]' > cain.txt
+	./word_mixup.py cain.txt data.big.i 20
+	cat data.big.i | sort | uniq -c | sort | sed 's/ //g' > data.big.t
 
-check: wclarge
-	sort dat.i | uniq -c | sort | sed 's/ //g' > _.sys.0
-	./wclarge -o 52428800 -n 4 dat.i | sort | sed 's/ //g' > _.prog.0
-	diff -u _.sys.0 _.prog.0
+check.big: wclarge data.big.i
+	./wclarge -o 52428800 -n 4 data.big.i | col -b | sort | sed 's/ //g' > data.big.o
+	diff -u data.big.t data.big.o
+
+check.small: wclarge
+	./wclarge -o 52428800 -n 4 data.small.i | sort | sed 's/ //g' > data.small.o
+	diff -u data.small.t data.small.o
 
 clean:
-	rm -rf wclarge _.* dat.i
+	rm -rf wclarge _.* *.i *.o cain.txt
+
 mrproper: clean
 	rm -rf cain.txt.bz2
 
-check.1: prep.1 check
-check.2: prep.2 check
-
-.PHONY: prep.1 prep.2 check clean
+.PHONY: check.small check.big clean
