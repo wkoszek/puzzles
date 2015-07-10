@@ -28,6 +28,7 @@ def main():
             data = [line.strip() for line in fi.read().split("\n")]
     fi.close();
 
+    random.seed(13)
     wordnum_cur = 0
     with open(g_fn_out, "w") as fo:
             while wordnum_cur < g_wordnum:
