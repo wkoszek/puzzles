@@ -24,6 +24,8 @@ check: wclarge
 
 clean:
 	rm -rf wclarge _.* dat.i
+mrproper: clean
+	rm -rf cain.txt.bz2
 
 check.1: prep.1 check
 check.2: prep.2 check
