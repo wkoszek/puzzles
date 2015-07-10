@@ -64,3 +64,11 @@ Just did very brief experiments:
 
 Avg time for dictionary: 0.46s.
 Avg time for dictionary-big: 12s
+
+Notes
+-----
+
+dictionary.txt in this repository was fetched from:
+
+	http://docs.oracle.com/javase/tutorial/collections/interfaces/examples/dictionary.txt
+
