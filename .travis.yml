@@ -1,9 +1,10 @@
+sudo: required
 language: c
 compiler:
         - clang
         - gcc
 install:
-        - "apt-get install python3"
+        - sudo apt-get install python3
 script:
         - ./travis.sh
 os:
