@@ -18,3 +18,8 @@ More explanation you have in the README here https://github.com/wkoszek/puzzles/
 
 - figure out how to (1) randomize the data (2) let Travis-Ci
   do the testing and comparison with base samples.
+
+# Author
+
+- Wojciech Adam Koszek, [wojciech@koszek.com](mailto:wojciech@koszek.com)
+- [http://www.koszek.com](http://www.koszek.com)
